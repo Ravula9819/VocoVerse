@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modern Text To Speech Converter</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="textLogo.png" alt="Logo" />
+    <h1>VocaVerse</h1>
+  </header>
+
+  <div class="container side-by-side">
+    <!-- Text to Speech Box -->
+    <div class="box" id="ttsBox">
+      <h2>Text to Speech</h2>
+      <textarea
+        id="txt"
+        placeholder="Enter text or upload a .txt file..."
+        rows="6"
+      ></textarea>
+      <input type="file" id="fileInput" accept=".txt" />
+
+      <label for="voiceSelect">Voice:</label>
+      <select id="voiceSelect"></select>
+
+      <label for="rate">Rate: <span id="rateValue">1</span></label>
+      <input type="range" id="rate" min="0.5" max="2" step="0.1" value="1" />
+
+      <label for="pitch">Pitch: <span id="pitchValue">1</span></label>
+      <input type="range" id="pitch" min="0" max="2" step="0.1" value="1" />
+
+      <button id="playBtn"><i class="fa-solid fa-play"></i> Play</button>
+      <button id="pauseBtn" style="display:none;">
+        <i class="fa-solid fa-pause"></i> Pause
+      </button>
+      <button id="resumeBtn" style="display:none;">
+        <i class="fa-solid fa-play"></i> Resume
+      </button>
+      <button id="downloadBtn"><i class="fa-solid fa-download"></i> Download Audio</button>
+
+      <div class="quote-box">
+        "Turn text into voice — instantly and intelligently."
+      </div>
+    </div>
+
+    <!-- Speech to Text Box -->
+    <div class="box" id="sttBox">
+      <h2>Speech to Text</h2>
+
+      <label for="sttLangSelect">Language:</label>
+      <select id="sttLangSelect">
+        <option value="en-US" selected>English (US)</option>
+        <option value="en-GB">English (UK)</option>
+        <option value="es-ES">Spanish (Spain)</option>
+        <option value="fr-FR">French</option>
+        <option value="de-DE">German</option>
+        <!-- Add more languages as needed -->
+      </select>
+
+      <textarea id="outputText" placeholder="Your speech will appear here..." rows="6" readonly></textarea>
+
+      <div class="stt-buttons">
+        <button id="startRecord"><i class="fa-solid fa-microphone"></i> Start Recording</button>
+        <button id="stopRecord" style="display:none;"><i class="fa-solid fa-stop"></i> Stop</button>
+        <button id="copyTextBtn"><i class="fa-regular fa-copy"></i> Copy Text</button>
+        <button id="clearTextBtn"><i class="fa-solid fa-trash"></i> Clear</button>
+        <input type="file" id="audioFileInput" accept="audio/*" />
+        <button id="convertAudioBtn">Convert Audio to Text</button>
+
+
+        <button id="downloadTextBtn"><i class="fa-solid fa-download"></i> Download Transcript</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
