@@ -1,7 +1,7 @@
 **VocaVerse**
 
 
-Find the Live here : [VOCOVERSE]( https://vocoverse.netlify.app/) 
+Find the Live here : [VOCAVERSE]( https://vocoverse.netlify.app/) 
 
 
 🎤 Overview  
