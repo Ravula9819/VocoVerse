@@ -1,5 +1,5 @@
 VocaVerse
-
+Find the Live here : [VOCOVERSE]( https://vocoverse.netlify.app/) 
 🎤 Overview  
 VocaVerse is a versatile web application that offers seamless Text-to-Speech and Speech-to-Text conversion. It empowers users to listen to written text with adjustable voice, pitch, and rate, and also convert spoken words into editable text. The platform supports file uploads, voice selection, and easy text management with copy, clear, and download options.
 
